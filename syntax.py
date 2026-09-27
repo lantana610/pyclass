@@ -9,7 +9,10 @@ else:
 
 score = int(input("your score:"))
 
-if score >= 80:
+
+if score < 0 or score > 100:
+    print('invalid score')
+elif score >= 80:
     print("you got A")
 elif score >= 70:
     print("you got B")
