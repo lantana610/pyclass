@@ -18,5 +18,5 @@ elif score >= 60:
 elif score >= 50:
     print("you got D")
 else:
-    print("faild")        
+    print("failed")        
        
