@@ -1,7 +1,7 @@
 age = int(input('enter your age:'))
-has_id = input('enter your ID:')
+has_id = input('enter your ID? (yes/no):')
 
-if age >= 18 and has_id:
+if age >= 18 and has_id.lower() == 'yes':
     print('granted access')
 else:
     print('access denied')  
