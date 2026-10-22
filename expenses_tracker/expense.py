@@ -34,7 +34,12 @@ def find_food_expenses(expenses):
         if expense["category"] == "Food":
             print(f"{expense['category']} - {expense['amount']}")
 
-    
+    expenses =[
+        {"category": "Food", "amount": 500},
+        {"category": "Transport", "amount": 200},
+        {"category": "Food", "amount": 300}
+    ]
+
 expenses = []
 
 add_expenses(expenses)
