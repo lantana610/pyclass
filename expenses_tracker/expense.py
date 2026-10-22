@@ -24,6 +24,9 @@ def calculate_expenses(expenses):
 
     print(f"Total: {total}")
 
+def count_expenses(expenses):
+    print(f"number of expenses {len(expenses)}")
+
 expenses = []
 
 add_expenses(expenses)
@@ -31,3 +34,4 @@ add_expenses(expenses)
 view_expenses(expenses)
 
 calculate_expenses(expenses)
+count_expenses(expenses)
