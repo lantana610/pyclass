@@ -12,7 +12,9 @@ def add_expenses(expenses):
     print("Expense added.")
 
 def view_expenses(expenses):
-    pass
+    for expense in expenses:
+        print(f"{expense['catergory']} - {expense['amount']}")
+
 
 def calculate_expenses(expenses):
     pass
