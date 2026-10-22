@@ -1,5 +1,5 @@
 
-def add_expenses(expenses):
+def add_expense(expenses):
     category = input("enter category: ")
     amount = float(input("Enter amount: "))
 
@@ -40,12 +40,25 @@ def find_food_expenses(expenses):
         {"category": "Food", "amount": 300}
     ]
 
+def delete_expense(expenses):
+    category_to_delete = input("Enter  what you want to delete: ").lower()
+
+    for expense in expenses:
+        if expense['category'].lower() == category_to_delete:
+
+            expenses.remove(expense)
+            print("expense deleted successfully")
+            return
+
+    return "category not found"
+
 expenses = []
 
-add_expenses(expenses)
+add_expense(expenses)
 
 view_expenses(expenses)
 
 calculate_expenses(expenses)
 count_expenses(expenses)
 find_food_expenses(expenses)
+delete_expense(expenses)
