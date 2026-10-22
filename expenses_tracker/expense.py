@@ -27,6 +27,14 @@ def calculate_expenses(expenses):
 def count_expenses(expenses):
     print(f"number of expenses {len(expenses)}")
 
+
+def find_food_expenses(expenses):
+
+    for expense in expenses:
+        if expense["category"] == "Food":
+            print(f"{expense['category']} - {expense['amount']}")
+
+    
 expenses = []
 
 add_expenses(expenses)
@@ -35,3 +43,4 @@ view_expenses(expenses)
 
 calculate_expenses(expenses)
 count_expenses(expenses)
+find_food_expenses(expenses)
