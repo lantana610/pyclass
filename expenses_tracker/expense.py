@@ -1,4 +1,4 @@
-expenses = []
+
 def add_expenses(expenses):
     category = input("enter category: ")
     amount = float(input("Enter amount: "))
@@ -23,3 +23,11 @@ def calculate_expenses(expenses):
         total += expense['amount']
 
     print(f"Total: {total}")
+
+expenses = []
+
+add_expenses(expenses)
+
+view_expenses(expenses)
+
+calculate_expenses(expenses)
