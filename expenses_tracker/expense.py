@@ -104,3 +104,12 @@ while True:
 
     else:
         print("invalid option.")
+
+with open("skills.txt", "w") as file:
+    file.write("Python")
+with open("skills.txt", "w") as file:
+    file.write("Go")
+with open("skills.txt", "w") as file:
+    file.write("linux")
+with open("skills.txt", "w") as file:
+    file.write("Git")
