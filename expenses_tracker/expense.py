@@ -68,6 +68,9 @@ def update_expense(expenses):
 expenses = []
 
 add_expense(expenses)
+add_expense(expenses)
+add_expense(expenses)
+
 
 view_expenses(expenses)
 
@@ -75,3 +78,4 @@ calculate_expenses(expenses)
 count_expenses(expenses)
 find_food_expenses(expenses)
 delete_expense(expenses)
+update_expense(expenses)
