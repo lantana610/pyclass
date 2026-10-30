@@ -52,6 +52,19 @@ def delete_expense(expenses):
 
     return "category not found"
 
+def update_expense(expenses):
+    category = input("enter catergory to update: ")
+    new_amount = float(input("enter new amount to update: "))
+
+    for expense in expenses:
+        if expense["category"] == category:
+            expense['amount'] == new_amount
+
+            print("expense updated successfully.")
+            
+            return
+
+    print("expense not found.")
 expenses = []
 
 add_expense(expenses)
