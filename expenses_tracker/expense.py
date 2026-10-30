@@ -1,4 +1,3 @@
-
 def add_expense(expenses):
     category = input("enter category: ")
     amount = float(input("Enter amount: "))
@@ -34,11 +33,7 @@ def find_food_expenses(expenses):
         if expense["category"] == "Food":
             print(f"{expense['category']} - {expense['amount']}")
 
-    expenses =[
-        {"category": "Food", "amount": 500},
-        {"category": "Transport", "amount": 200},
-        {"category": "Food", "amount": 300}
-    ]
+   
 
 def delete_expense(expenses):
     category_to_delete = input("Enter  what you want to delete: ").lower()
@@ -58,24 +53,50 @@ def update_expense(expenses):
 
     for expense in expenses:
         if expense["category"] == category:
-            expense['amount'] == new_amount
+            expense['amount'] = new_amount
 
             print("expense updated successfully.")
             
             return
 
     print("expense not found.")
+
+
 expenses = []
 
-add_expense(expenses)
-add_expense(expenses)
-add_expense(expenses)
+while True:
 
+    option = input(
+        "\n1. Add Expense"
+        "\n2. View Expenses"
+        "\n3. Calculate Total"
+        "\n4. Count Expenses"
+        "\n5. Find Food Expenses"
+        "\n6. Update Expense"
+        "\n7. Delete Expense"
+        "\n8. Exit"
+        "\nChoose an option: "
+    )
+    if option == "1":
+        add_expense(expenses)
 
-view_expenses(expenses)
+    elif option == "2":
+        view_expenses(expenses)
 
-calculate_expenses(expenses)
-count_expenses(expenses)
-find_food_expenses(expenses)
-delete_expense(expenses)
-update_expense(expenses)
+    elif option == "3":
+        calculate_expenses(expenses)
+
+    elif option == "4":
+        count_expenses(expenses)
+
+    elif option == "5":
+        find_food_expenses(expenses)
+
+    elif option == "6":
+        update_expense(expenses)
+
+    elif option == "7":
+        delete_expense(expenses)
+
+    elif option == "8":
+        break
