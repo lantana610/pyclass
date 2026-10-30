@@ -45,7 +45,7 @@ def delete_expense(expenses):
             print("expense deleted successfully")
             return
 
-    return "category not found"
+    print("category not found")
 
 def update_expense(expenses):
     category = input("enter catergory to update: ")
@@ -99,4 +99,8 @@ while True:
         delete_expense(expenses)
 
     elif option == "8":
+        print("Googbye!")
         break
+
+    else:
+        print("invalid option.")
